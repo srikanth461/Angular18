@@ -1,0 +1,21 @@
+<div class="parent">
+  <h2>Spy Directive</h2>
+
+  <input [(ngModel)]="newName" (keyup.enter)="addHero()">
+  <button (click)="addHero()">Add Hero</button>
+  <button (click)="reset()">Reset Heroes</button>
+
+  <p></p>
+  <div *ngFor="let hero of heroes" mySpy class="heroes">
+    {{hero}}
+  </div>
+  <h4>-- Spy Lifecycle Hook Log --</h4>
+  <div *ngFor="let msg of logger.logs">{{msg}}</div>
+</div>
+
+
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
